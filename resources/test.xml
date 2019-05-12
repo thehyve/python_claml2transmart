@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ClaML SYSTEM "ClaML.dtd">
+<ClaML version="2.0.0">
+	<Meta name="TopLevelSort" value="A B"/>
+	<Meta name="titleLong" value="Test data"/>
+	<Meta name="preliminary" value="true"/>
+	<Meta name="lang" value="en"/>
+	<Meta name="copyright" value="The Hyve 2019"/>
+	<Identifier authority="thehyve.nl" uid="python_ontology2transmart/resources/text.xml"/>
+	<Title date="2019-05-13" name="Test_data" version="2019">Test data</Title>
+	<ClassKinds>
+		<ClassKind name="category"/>
+		<ClassKind name="group"/>
+		<ClassKind name="concept"/>
+	</ClassKinds>
+	<RubricKinds>
+		<RubricKind inherited="false" name="preferred"/>
+	</RubricKinds>
+	<Class code="A" kind="category">
+		<SubClass code="DEMO"/>
+		<SubClass code="ID"/>
+		<Rubric kind="preferred">
+			<Label xml:lang="en" xml:space="default">Category A</Label>
+		</Rubric>
+	</Class>
+	<Class code="DEMO" kind="group">
+		<SuperClass code="A"/>
+		<SubClass code="AGE"/>
+		<SubClass code="GEN"/>
+		<Rubric kind="preferred">
+			<Label xml:lang="en" xml:space="default">Demographics</Label>
+		</Rubric>
+	</Class>
+	<Class code="AGE" kind="concept">
+		<SuperClass code="DEMO"/>
+		<Rubric kind="preferred">
+			<Label xml:lang="en" xml:space="default">Age</Label>
+		</Rubric>
+	</Class>
+	<Class code="GEN" kind="concept">
+		<SuperClass code="DEMO"/>
+		<Rubric kind="preferred">
+			<Label xml:lang="en" xml:space="default">Gender</Label>
+		</Rubric>
+	</Class>
+	<Class code="ID" kind="group">
+		<SuperClass code="A"/>
+		<SubClass code="PSEUDO"/>
+		<Rubric kind="preferred">
+			<Label xml:lang="en" xml:space="default">Identifiers</Label>
+		</Rubric>
+	</Class>
+	<Class code="PSEUDO" kind="concept">
+		<SuperClass code="ID"/>
+		<Rubric kind="preferred">
+			<Label xml:lang="en" xml:space="default">Pseudonym</Label>
+		</Rubric>
+	</Class>
+	<Class code="B" kind="category">
+		<SubClass code="BODY"/>
+		<SubClass code="ID"/>
+		<Rubric kind="preferred">
+			<Label xml:lang="en" xml:space="default">Category B</Label>
+		</Rubric>
+	</Class>
+	<Class code="BODY" kind="group">
+		<SuperClass code="B"/>
+		<SubClass code="HEIGHT"/>
+		<Rubric kind="preferred">
+			<Label xml:lang="en" xml:space="default">Body characteristics</Label>
+		</Rubric>
+	</Class>
+	<Class code="HEIGHT" kind="concept">
+		<SuperClass code="BODY"/>
+		<Rubric kind="preferred">
+			<Label xml:lang="en" xml:space="default">Body height</Label>
+		</Rubric>
+	</Class>
+</ClaML>
