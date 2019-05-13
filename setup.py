@@ -40,7 +40,7 @@ setup(
         'console_scripts': ['claml2transmart=claml2transmart.claml2transmart:main'],
     },
     include_package_data=True,
-    license="GNU General Public License v3 or later",
+    license="MIT",
     zip_safe=False,
     keywords='claml2transmart',
     classifiers=[
