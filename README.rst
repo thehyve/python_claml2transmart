@@ -21,7 +21,8 @@ This package contains a mapper that reads ontologies in Classification Markup La
 and translates them to the data model of the TranSMART_ platform,
 an open source data sharing and analytics platform for translational biomedical research.
 
-It also provides a utility that applies the mapper and writes the translated data to tab-separated files
+It also provides a utility that applies the mapper and writes the translated data,
+using transmart-loader_, to tab-separated files
 that can be loaded into a TranSMART database using the transmart-copy_ tool.
 
 The packages uses the python-claml_ package for reading ClaML files.
