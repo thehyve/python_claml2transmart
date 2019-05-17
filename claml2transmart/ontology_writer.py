@@ -28,13 +28,13 @@ def to_string(nodes):
 
 class OntologyWriter:
 
-    def process_class(self, cls: Class) -> None:
+    def process_class(self, cls: Class, code_prefix: bool = False) -> None:
         class_label = None
         for rubric in cls.Rubric:
             if rubric.kind == 'preferred':
                 for label in rubric.Label:
                     class_label = to_string(label.toDOM().childNodes)
-        class_label = cls.code + '. ' + class_label
+        class_label = cls.code + '. ' + class_label if code_prefix else class_label
         if len(cls.SuperClass) > 0:
             for superClass in cls.SuperClass:
                 self.mapper.map_code(superClass.code, cls.code, class_label)

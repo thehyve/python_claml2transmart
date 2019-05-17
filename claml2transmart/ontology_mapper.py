@@ -14,7 +14,8 @@ class OntologyMapper:
         self.concepts: Set[Concept] = set()
 
     def map_code(self, parent_code: Optional[str], code: str, label: str) -> None:
-        concept = Concept(code, label, self.system + '/' + code, ValueType.Categorical)
+        concept_code = self.system + '/' + code
+        concept = Concept(concept_code, label, concept_code, ValueType.Categorical)
         self.concepts.add(concept)
         node = ConceptNode(concept)
         if parent_code is not None and parent_code in self.nodes:

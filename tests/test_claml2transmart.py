@@ -92,9 +92,15 @@ def test_write_ontology(tmp_path, simple_classification: ClaML):
     assert count_lines(target_path + '/i2b2metadata/i2b2_secure.tsv') == 6
 
 
-def test_claml2transmart(tmp_path):
+def test_claml2transmart_with_code_prefix(tmp_path):
     target_path = tmp_path.as_posix()
-    run('http://mock.system', 'resources/test.xml', target_path)
+    run('http://mock.system', 'resources/test.xml', target_path, True)
     assert count_lines(target_path + '/i2b2demodata/concept_dimension.tsv') == 10
     assert count_lines(target_path + '/i2b2metadata/i2b2_secure.tsv') == 10
 
+
+def test_claml2transmart_without_code_prefix(tmp_path):
+    target_path = tmp_path.as_posix()
+    run('http://hl7.org/fhir', 'resources/fhir.xml', target_path, False)
+    assert count_lines(target_path + '/i2b2demodata/concept_dimension.tsv') == 6
+    assert count_lines(target_path + '/i2b2metadata/i2b2_secure.tsv') == 6

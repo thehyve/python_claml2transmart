@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ClaML SYSTEM "ClaML.dtd">
+<ClaML version="2.0.0">
+	<Meta name="TopLevelSort" value="A B"/>
+	<Meta name="titleLong" value="FHIR is a standard for health care data exchange, published by HL7®."/>
+	<Meta name="preliminary" value="true"/>
+	<Meta name="lang" value="en"/>
+	<Meta name="copyright" value="HL7 2018"/>
+	<Identifier authority="hl7.org" uid="fhir/4.0.0-1"/>
+	<Title date="2018-12-27" name="HL7FHIR" version="4.0.0">HL7 FHIR</Title>
+	<ClassKinds>
+		<ClassKind name="resource"/>
+		<ClassKind name="attribute"/>
+	</ClassKinds>
+	<RubricKinds>
+		<RubricKind inherited="false" name="preferred"/>
+	</RubricKinds>
+	<Class code="Patient" kind="resource">
+		<SubClass code="gender"/>
+		<SubClass code="birth_date"/>
+		<Rubric kind="preferred">
+			<Label xml:lang="en" xml:space="default">Patient</Label>
+		</Rubric>
+	</Class>
+	<Class code="Patient.gender" kind="attribute">
+		<SuperClass code="Patient"/>
+		<Rubric kind="preferred">
+			<Label xml:lang="en" xml:space="default">Gender</Label>
+		</Rubric>
+	</Class>
+	<Class code="Patient.birth_date" kind="attribute">
+		<SuperClass code="Patient"/>
+		<Rubric kind="preferred">
+			<Label xml:lang="en" xml:space="default">Birth date</Label>
+		</Rubric>
+	</Class>
+	<Class code="Encounter" kind="resource">
+		<Rubric kind="preferred">
+			<Label xml:lang="en" xml:space="default">Encounter</Label>
+		</Rubric>
+	</Class>
+	<Class code="Condition" kind="resource">
+		<Rubric kind="preferred">
+			<Label xml:lang="en" xml:space="default">Condition</Label>
+		</Rubric>
+	</Class>
+</ClaML>
