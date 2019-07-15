@@ -74,7 +74,7 @@ empty of not existing (then it will be created).
 
   claml2transmart [--code-prefix] <system> <input.xml> /path/to/output
 
-With ``--code_prefix``, the concept code as prefix for the concept label.
+With ``--code_prefix``, the concept code is used as prefix for the concept label.
 
 
 Example: the ICD-10-GM (German modification of ICD-10) is available at icd10gm2019syst-claml.zip_.

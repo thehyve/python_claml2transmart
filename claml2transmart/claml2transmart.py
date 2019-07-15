@@ -47,7 +47,9 @@ def run(system: str, input_file: str, output_dir: str, code_prefix: bool = False
 @click.argument('system')
 @click.argument('input_file')
 @click.argument('output_dir')
-@click.option('--code-prefix', is_flag=True)
+@click.option('--code-prefix', is_flag=True, show_default=True,
+              help='Use the concept code as prefix for the concept label')
+@click.version_option()
 def claml2transmart(system: str, input_file: str, output_dir: str, code_prefix: bool):
     run(system, input_file, output_dir, code_prefix)
 
