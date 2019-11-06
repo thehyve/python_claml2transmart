@@ -115,4 +115,6 @@ License
 
 Copyright (c) 2019 The Hyve B.V.
 
-The ClaML ontology to TranSMART loader is licensed under the MIT License. See the file `<LICENSE>`_.
+The ClaML ontology to TranSMART loader is licensed under the MIT License. See the file LICENSE_.
+
+.. _LICENSE: https://github.com/thehyve/python_claml2transmart/blob/master/LICENSE
