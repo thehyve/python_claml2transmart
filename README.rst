@@ -103,6 +103,13 @@ The generated data can be loaded using transmart-copy_:
   PGUSER=tm_cz PGPASSWORD=tm_cz java -jar transmart-copy.jar -d output
 
 
+Acknowledgement
+---------------
+
+This project was funded by the German Ministry of Education and Research (BMBF) as part of the project
+DIFUTURE - Data Integration for Future Medicine within the German Medical Informatics Initiative (grant no. 01ZZ1804D).
+
+
 License
 -------
 
